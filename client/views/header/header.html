@@ -1,0 +1,22 @@
+<template name="header">
+    <div class="content">
+        <h1>YOU <span>ABOUT</span> ME</h1>
+        <div class="loginArea">
+            {{#if currentUser}}
+                <div class="logedin">
+                    <span class="greeting">
+                        {{#if currentUser.username}}
+                        	Hi <span class="name">{{currentUser.username}}!</span>
+                        {{/if}}
+                    </span>
+                    <div class="ui fluid purple log-out button">
+                        <i class="sign out icon"></i>
+                        Log out
+                    </div>
+                </div>
+            {{else}}
+               
+            {{/if}}
+        </div>
+    </div>
+</template>

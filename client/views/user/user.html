@@ -1,0 +1,28 @@
+<template name="user">
+	<div class="content">
+		<h2>Who is {{ viewedUser }}?</h2>
+	    <div class="categoriesListContainer ui segment">
+	    	{{#if noCategories}}
+	    		<div class="noCategories">
+	    			<h3>No categories yet</h3>
+	    			<div class="ui form">
+				  		<div class="field">
+					    	
+					    	<input type="text" name="title" placeholder="Who is {{ viewedUser }}">
+					 	</div>
+					 	<div class="ui submit button addRecommendTitle">Recommend</div>
+					</div>
+				</div>
+			{{else}}
+				{{#each userCategories}}
+			    	{{> category}}
+			    {{/each}}
+			{{/if}}
+		</div>
+
+	    {{#if isViewedUser}}
+	    	{{> addCategory}}
+	    {{/if}}
+	</div>
+  
+</template>

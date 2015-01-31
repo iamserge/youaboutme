@@ -1,0 +1,17 @@
+<template name="categoryPage">
+  <div class="content">
+	{{#with category}}
+	    <div class="ui vertical segment">
+		    <h3>{{categoryname}}</h3>
+		    <p>{{description}}</p>
+	  	</div>
+  	{{/with}}
+  	<h2>Reviews</h2>
+  	{{#each reviews}}
+  		{{> review}}
+  	{{/each}}
+  	{{#if notSelf}}
+  		{{> addReview }}
+  	{{/if}}
+  </div>
+</template>
